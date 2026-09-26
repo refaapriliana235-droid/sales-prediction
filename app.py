@@ -12,7 +12,7 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data_superstore.csv", encoding="latin-1")
+    df = pd.read_csv("data_superstore.csv.csv", encoding="latin-1")
     df["Order Date"] = pd.to_datetime(df["Order Date"], format="%m/%d/%Y", errors="coerce")
     df["Year"] = df["Order Date"].dt.year
     df["Month"] = df["Order Date"].dt.month
